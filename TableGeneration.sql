@@ -40,10 +40,9 @@ ALTER TABLE Career ADD FOREIGN KEY (DepartmentCode) REFERENCES Department(Code);
 CREATE TABLE Salary(
 	Code int IDENTITY(1,1) NOT NULL primary key,
 	EmployeeCode int NOT NULL,
-	Month int NOT NULL,
+	Month smallint NOT NULL,
 	Year int NOT NULL,
 	Salary money NOT NULL
 );
 
 ALTER TABLE Salary ADD FOREIGN KEY (EmployeeCode) REFERENCES Employee(Code); 
-
